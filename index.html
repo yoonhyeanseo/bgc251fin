@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ∨×××× [수정 금지] ××××∨ -->
+    <title></title>
+    <!-- ∧×××× [수정 금지] ××××∧ -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link rel="stylesheet" href="./common/p5template/p5template.css" />
+
+    <script src="./common/p5template/responsive.js"></script>
+    <script src="./common/p5template/scroll.js"></script>
+    <script src="./common/p5template/title.js"></script>
+    <script src="./common/p5template/references.js"></script>
+    <script src="./common/p5template/paging.js"></script>
+    <script>
+      new P5Template.Scroll();
+
+      // ∨○○○○ [수정 필수] ○○○○∨
+      // 작품 제목, 본인 성명, 작품 공개 연도
+      new P5Template.Title('"When I Stand" (일어설 때)', '윤현서', '2025');
+      // 참고자료 목록
+      const references = [
+        {
+          title: 'Coding Challenge 166: ASCII Text Images',
+          authors: ['Daniel Shiffman'],
+          year: '2022',
+          publisher: 'The Coding Train - YouTube',
+          url: 'https://www.youtube.com/watch?v=55iwMYv8tGI&t=518s',
+        },
+        {
+          title: 'Data Structure Garden',
+          authors: ['Portia Morrell, Jaleesa Trapp, Kate Maschmeyer'],
+          year: '2020 예상',
+          publisher: 'Tutorials-5js',
+          url: 'https://p5js.org/tutorials/data-structure-garden/',
+        },
+      ];
+      // ∧○○○○ [수정 필수] ○○○○∧
+
+      new P5Template.References(references);
+      new P5Template.Paging();
+    </script>
+
+    <!-- ∨○○○○ [수정 필수] ○○○○∨ -->
+    <!-- p5.js 라이브러리 로딩 -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
+    <!-- 본인 스케치 로딩 -->
+    <script src="./sketches/example.js" defer></script>
+    <!-- ∧○○○○ [수정 필수] ○○○○∧ -->
+  </head>
+  <body>
+    <main id="main">
+      <!-- ∨○○○○ [수정 필수] ○○○○∨ -->
+      <!-- 전체화면 여부 선택 -->
+      <section
+        id="section-canvas"
+        class="section section--canvas canvas"
+        data-full-width="false"
+      >
+        <!-- ∧○○○○ [수정 필수] ○○○○∧ -->
+        <div class="container canvas__container">
+          <div id="canvas-container"></div>
+        </div>
+      </section>
+      <section id="section-control" class="section section--control control">
+        <div class="container control__container control__container">
+          <div class="control__label">
+            <div class="control__label__title title"></div>
+            <div class="control__label__author author"></div>
+          </div>
+          <div class="control__paging">
+            <button
+              id="button-prev"
+              class="icon-button control__button control__button--prev"
+              data-icon="arrow_back_ios_new"
+              aria-label="to previous"
+            ></button>
+            <button
+              id="button-next"
+              class="icon-button control__button control__button--next"
+              data-icon="arrow_forward_ios"
+              aria-label="to next"
+            ></button>
+            <button
+              id="button-list"
+              class="icon-button control__button control__button--list"
+              data-icon="grid_view"
+              aria-label="to list"
+            ></button>
+          </div>
+          <div class="control__scroll">
+            <button
+              id="button-scroll"
+              class="icon-button control__button control__button--scroll"
+              data-icon="arrow_drop_down"
+              aria-label="toggle description"
+              data-toward="down"
+            ></button>
+          </div>
+        </div>
+      </section>
+      <section
+        id="section-information"
+        class="section section--information information"
+      >
+        <div class="container information__container">
+          <div class="information__label">
+            <h1 class="information__label__title title"></h1>
+            <h2 class="information__label__author author"></h2>
+          </div>
+          <div class="information__description">
+            <!-- ∨○○○○ [수정 필수] ○○○○∨ -->
+            <!-- 작품 설명 -->
+            <p>
+              "When I Stand"는 기립성저혈압으로 인해 일어나는 눈앞의 시각적
+              경험을 디지털 아트로 재해석한 작품이다. 갑작스럽게 일어설 때 혈압
+              변화로 인해 시야에 나타나는 색깔 있는 점들이 점진적으로 확장되다가
+              사라지는 생리학적 현상을 실시간 영상과 ASCII 아트를 통해
+              시각화했다.
+            </p>
+            <p>
+              일상에서 경험하는 기립성저혈압을 단순한 의학적 증상을 넘어서, 우리
+              신체가 만들어내는 독특한 시각적 언어라고 생각했다. 눈앞에 펼쳐지는
+              점들의 춤, 색깔의 파동, 그리고 점진적인 소멸은 마치 디지털 글리치
+              같은 아름다움을 지니고 있다. 이 작품은 그러한 개인적이고 내밀한
+              신체 경험을 데이터화하여 보편적인 시각 언어로 번역을 시도했다.
+            </p>
+            <p>
+              개인적인 생리학적 경험을 디지털 코드로 번역함으로써, 우리 몸이
+              생성하는 정보를 새로운 방식으로 해석한다. 기립성저혈압이라는
+              '오류'를 예술적 '특징'으로 전환시킨다. 일시성과 영속성 실제
+              기립성저혈압 증상처럼 생성과 소멸을 반복하는 디지털 요소들은
+              덧없음의 아름다움을 표현한다. 동시에 코드를 통해 이러한 경험이
+              무한히 재생산될 수 있는 영속성을 획득한다.
+            </p>
+            <!-- ∧○○○○ [수정 필수] ○○○○∧ -->
+          </div>
+          <div class="information__reference">
+            <div class="information__reference__wrap">
+              <div class="information__reference__title">참고자료</div>
+              <ol></ol>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
